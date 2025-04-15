@@ -1,0 +1,39 @@
+Task 2: Security Implementation Report
+Objective:
+Enhance the security of a simple Node.js web application by implementing key security practices and tools including password hashing, 
+JWT-based authentication, input validation, and HTTP header protection.
+Security Features Implemented:
+1) Password Hashing with Bcrypt
+Installed bcrypt via npm
+Hashed passwords before storage to enhance credential protection
+Secure implementation confirmed with successful output and no vulnerabilities
+
+2) Email Validation
+Regex-based email format verification
+Invalid or malformed emails are rejected with proper error handling
+
+3) JWT Authentication
+Installed jsonwebtoken via npm
+Issued JWT tokens upon successful login
+Payload contains user email and expiry timestamp
+Verified by curl test showing a valid JWT response
+
+4) HTTP Header Hardening with Helmet
+Installed and integrated helmet middleware
+Automatically sets secure HTTP headers (e.g., X-Powered-By removed, Content-Security-Policy, etc.)
+
+5) Server Response Verification
+Used curl -I to validate HTTP response headers
+Received 200 OK response with security headers from helmet
+
+Tools Used:
+Node.js
+Express.js
+Bcrypt
+jsonwebtoken (JWT)
+Helmet
+Curl (for testing endpoints)
+
+Result:
+All implementations were successfully integrated. The app now includes basic but effective protections for authentication 
+and secure HTTP practices. No runtime errors or vulnerabilities were detected.
